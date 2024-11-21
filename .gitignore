@@ -6,7 +6,7 @@
 # misc
 npm-debug.log
 
-
+.idea
 # tests
 /test
 /coverage
