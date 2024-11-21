@@ -454,194 +454,7 @@
 											]
 										}
 									},
-									"response": [
-										{
-											"id": "4ef33641-e087-4bfd-842b-49c32f690f77",
-											"name": "Untitled Example",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/site/integration/list?v=2&language=en&limit=20&offset=0&user_id=<number>&user_id1=<number>&user_id2=<number>&user_id3=<number>&user_id4=<number>&user_id5=<number>&filter=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"site",
-														"integration",
-														"list"
-													],
-													"query": [
-														{
-															"description": "(Required) Version",
-															"key": "v",
-															"value": "2"
-														},
-														{
-															"description": "(Required) Current language",
-															"key": "language",
-															"value": "en"
-														},
-														{
-															"description": "Number of results",
-															"key": "limit",
-															"value": "20"
-														},
-														{
-															"description": "Page offset number",
-															"key": "offset",
-															"value": "0"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id1",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id2",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id3",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id4",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id5",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "filter",
-															"value": "<string>"
-														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "b5bed388-734f-4a01-8a10-f36a7f44b0fb"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}"
-										},
-										{
-											"id": "463fd927-cc89-4046-8d51-5da500154cc4",
-											"name": "Untitled Example",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/site/integration/list?v=2&language=en&limit=20&offset=0&user_id=<number>&user_id1=<number>&user_id2=<number>&user_id3=<number>&user_id4=<number>&user_id5=<number>&filter=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"site",
-														"integration",
-														"list"
-													],
-													"query": [
-														{
-															"description": "(Required) Version",
-															"key": "v",
-															"value": "2"
-														},
-														{
-															"description": "(Required) Current language",
-															"key": "language",
-															"value": "en"
-														},
-														{
-															"description": "Number of results",
-															"key": "limit",
-															"value": "20"
-														},
-														{
-															"description": "Page offset number",
-															"key": "offset",
-															"value": "0"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id1",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id2",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id3",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id4",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "user_id5",
-															"value": "<number>"
-														},
-														{
-															"description": "(Required) ",
-															"key": "filter",
-															"value": "<string>"
-														}
-													]
-												}
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "c3247cb0-e2e7-49ce-b35b-33dc49820d82"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"error\": {\n    \"name\": \"<string>\",\n    \"msg\": \"<string>\",\n    \"options\": {},\n    \"data\": {},\n    \"validator_error\": [\n      {\n        \"target\": {},\n        \"property\": \"<string>\",\n        \"value\": {},\n        \"constraints\": {},\n        \"contexts\": {}\n      },\n      {\n        \"target\": {},\n        \"property\": \"<string>\",\n        \"value\": {},\n        \"constraints\": {},\n        \"contexts\": {}\n      }\n    ]\n  }\n}"
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "21375f47-2a86-4cc9-91b9-e376591267c7"
@@ -10235,7 +10048,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"v\": \"3\",\n  \"language\": \"en\",\n  \"project_id\": \"<number>\",\n  \"channel_id\": \"<number>\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"category_id\": \"498482\",\n  \"category_name\": \"name\",\n  \"playlist_id\": \"<string>\",\n  \"audience\": \"Audience\",\n  \"latency\": \"Latency\",\n  \"privacy_video\": \"privacy video\",\n  \"image\": \"image url link or base64\",\n  \"lang\": \"Lang\",\n  \"tags\": [\n    \"//\",\n    \"/П1чy8ь/\"\n  ]\n}"
+													"raw": "{\n  \"v\": \"3\",\n  \"language\": \"en\",\n  \"project_id\": \"<number>\",\n  \"channel_id\": \"<number>\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"category_id\": \"498482\",\n  \"category_name\": \"name\",\n  \"playlist_id\": \"<string>\",\n  \"audience\": \"Audience\",\n  \"latency\": \"Latency\",\n  \"privacy_video\": \"privacy video\",\n  \"image\": \"image url link or base64\",\n  \"lang\": \"Lang\",\n  \"tags\": [\n    \"/fдЦbh/\",\n    \"/БкХTэОw/\"\n  ]\n}"
 												},
 												"url": {
 													"raw": "{{baseUrl}}/site/channel_settings/options/setYoutube",
@@ -10533,7 +10346,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"v\": \"3\",\n  \"language\": \"en\",\n  \"project_id\": \"<number>\",\n  \"channel_id\": \"<number>\",\n  \"title\": \"title\",\n  \"category_id\": \"498482\",\n  \"category_name\": \"name\",\n  \"lang\": \"Lang\",\n  \"tags\": [\n    \"/8рК/\",\n    \"/сDЗfЁПА/\"\n  ],\n  \"domain\": \"live.twitch.tv\"\n}"
+													"raw": "{\n  \"v\": \"3\",\n  \"language\": \"en\",\n  \"project_id\": \"<number>\",\n  \"channel_id\": \"<number>\",\n  \"title\": \"title\",\n  \"category_id\": \"498482\",\n  \"category_name\": \"name\",\n  \"lang\": \"Lang\",\n  \"tags\": [\n    \"/ЗeЮHNУЗZ/\",\n    \"/M/\"\n  ],\n  \"domain\": \"live.twitch.tv\"\n}"
 												},
 												"url": {
 													"raw": "{{baseUrl}}/site/channel_settings/options/setTwitch",
@@ -33704,7 +33517,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"v\": \"1\",\n  \"notion_id\": \"<string>\",\n  \"parent_notion_id\": \"<string>\",\n  \"language\": \"en\",\n  \"title\": \"<string>\",\n  \"text\": \"<string>\",\n  \"image\": \"<string>\",\n  \"short_text\": \"<string>\",\n  \"date_update\": \"<dateTime>\",\n  \"date_publish\": \"<dateTime>\",\n  \"status\": \"Reviewing\",\n  \"notion_edit_url\": \"<string>\",\n  \"notion_public_url\": \"<string>\",\n  \"tags\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"color\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"color\": \"<string>\"\n    }\n  ]\n}"
+											"raw": "{\n  \"v\": \"1\",\n  \"notion_id\": \"<string>\",\n  \"parent_notion_id\": \"<string>\",\n  \"language\": \"en\",\n  \"title\": \"<string>\",\n  \"text\": \"<string>\",\n  \"image\": \"<string>\",\n  \"short_text\": \"<string>\",\n  \"date_update\": \"<dateTime>\",\n  \"date_publish\": \"<dateTime>\",\n  \"status\": \"Backlog\",\n  \"notion_edit_url\": \"<string>\",\n  \"notion_public_url\": \"<string>\",\n  \"tags\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"color\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"color\": \"<string>\"\n    }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{baseUrl}}/cmd/blog/updateContent",
