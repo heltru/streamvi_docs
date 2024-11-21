@@ -6,12 +6,12 @@
     },
     "item": [
         {
-            "name": "New Folder",
+            "name": "New Folder234",
             "item": [],
             "id": "8a53a3a8-2d28-4518-985b-a566c698a279"
         },
         {
-            "name": "Sample endpoint: Returns details about a particular user . Hello world. Added more text",
+            "name": "Sample endpoint234532: Returns details about a particular user . Hello world. Added more text",
             "event": [
                 {
                     "listen": "test",
