@@ -1,0 +1,21 @@
+# IDE
+/.idea
+/.awcache
+/.vscode
+
+# misc
+npm-debug.log
+
+
+# tests
+/test
+/coverage
+/.nyc_output
+
+# dist
+/dist
+
+
+
+/tmp
+.DS_Store
