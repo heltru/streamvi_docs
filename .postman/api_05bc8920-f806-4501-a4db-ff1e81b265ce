@@ -14,7 +14,6 @@ files[] = {"id":"39818707-a70199a9-4175-40d9-b90d-8dfce42f8b42","path":"StreamVi
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
-files[] = {"path":"backend_v2 Copy.json","metaData":{}}
 files[] = {"path":"backend_v2.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
