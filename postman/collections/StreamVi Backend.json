@@ -375,8 +375,17 @@
 												"value": "application/json"
 											}
 										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{baseUrl}}/site/integration/list?v=2&language=en&limit=20&offset=0&user_id=<number>&user_id1=<number>&user_id2=<number>&user_id3=<number>&user_id4=<number>&user_id5=<number>&filter=<string>",
+											"raw": "{{baseUrl}}/site/integration/list?v=2&language=en&limit=20&offset=0&user_id=193&user_id1=<number>&user_id2=<number>&user_id3=<number>&user_id4=<number>&user_id5=<number>&filter=all",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -408,7 +417,7 @@
 												},
 												{
 													"key": "user_id",
-													"value": "<number>",
+													"value": "193",
 													"description": "(Required) "
 												},
 												{
@@ -438,7 +447,7 @@
 												},
 												{
 													"key": "filter",
-													"value": "<string>",
+													"value": "all",
 													"description": "(Required) "
 												}
 											]
@@ -29618,22 +29627,65 @@
 				}
 			],
 			"id": "6393b58d-2871-4848-9ef6-b7c8babe030b",
+			"auth": {
+				"type": "bearer"
+			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "deb52253-7147-4594-bc0c-34cd2c8a5574",
+						"id": "3dd65e92-2915-4942-b4e5-1a956e261075",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
-							"postman"
+							"const url = pm.environment.get('baseUrl')+'/site/auth/refresh-access?v=1&language=ru';\r",
+							"console.log(url);\r",
+							"\r",
+							"const accessToken_time = pm.environment.get('accessToken_time');\r",
+							"console.log('accessToken_time=',accessToken_time);\r",
+							"console.log('rid_site',pm.environment.get('rid_site'));\r",
+							"console.log('query=',new Date().getTime() - 15*60*1000, accessToken_time);\r",
+							"if ((new Date().getTime() - 15*60*1000 > accessToken_time) || accessToken_time === undefined){\r",
+							"    console.log('sendRequest');\r",
+							"    let body = {\r",
+							"             mode: 'raw',\r",
+							"             raw: JSON.stringify({refresh: pm.environment.get('rid_site'), app: \"site\"})\r",
+							"        };\r",
+							"     console.log('body=',body);\r",
+							"    pm.sendRequest({\r",
+							"        url: url,\r",
+							"        method: 'POST',\r",
+							"        header: {'Content-Type': 'application/json'},\r",
+							"        body: body\r",
+							"    }, (error, response)=> {\r",
+							"        if (error){\r",
+							"            console.log(error);\r",
+							"        } else {\r",
+							"            let resp = JSON.parse(response.text());\r",
+							"            console.log(resp);\r",
+							"            if (resp.accessToken && resp.refreshToken){\r",
+							"                const rid_site = resp.refreshToken;\r",
+							"                let accessToken = resp.accessToken;\r",
+							"                pm.environment.set('rid_site', rid_site);\r",
+							"                pm.environment.set('accessToken',accessToken);\r",
+							"                pm.environment.set('accessToken_time',  new Date().getTime())\r",
+							"            }\r",
+							"        }\r",
+							"    });\r",
+							"} else {\r",
+							"     console.log('not need sendRequest');\r",
+							"      pm.request.headers.add({\r",
+							"        key: \"Authorization\",\r",
+							"        value: pm.environment.get('accessToken')\r",
+							"    });\r",
+							"}"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "a2ba4e61-37ee-4ba4-9dc7-f80ae48696e3",
+						"id": "1b4049ea-7ae6-412b-a3ed-3888520d32cd",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
