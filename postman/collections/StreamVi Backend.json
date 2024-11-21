@@ -29617,7 +29617,31 @@
 					"id": "51876e2a-ea20-4614-9280-f6734b8d5183"
 				}
 			],
-			"id": "6393b58d-2871-4848-9ef6-b7c8babe030b"
+			"id": "6393b58d-2871-4848-9ef6-b7c8babe030b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "deb52253-7147-4594-bc0c-34cd2c8a5574",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"postman"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ba4e61-37ee-4ba4-9dc7-f80ae48696e3",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "cmd",
